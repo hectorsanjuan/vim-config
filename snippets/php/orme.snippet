@@ -1,0 +1,19 @@
+<?php
+
+namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * $2.
+ *
+ * ${3}
+ *
+ * @ORM\Table(name="${4:table_name}")
+ * @ORM\Entity${5:(repositoryClass="$1\$2Repository"))}
+ */
+class ${2:`Filename()`}
+{
+	${6}
+}
+

@@ -1,0 +1,32 @@
+<?php
+
+namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilder;
+
+/**
+ * $2.
+ *
+ * ${3}
+ */
+class ${2:`Filename('', 'Type')`} extends AbstractType
+{
+	public function buildForm(FormBuilder $builder, array $options)
+	{
+		${6}
+	}
+
+	public function getDefaultOptions(array $options)
+	{
+		return array(
+			'data-class' => '${5}',
+		);
+	}
+
+	public function getName()
+	{
+		return '${4}';
+	}
+}
+

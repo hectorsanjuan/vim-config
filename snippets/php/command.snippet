@@ -1,0 +1,31 @@
+<?php
+
+namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
+/**
+ * $2.
+ *
+ * ${3}
+ */
+class ${2:`Filename('', 'Command')`} extends ContainerAwareCommand
+{
+	protected function configure()
+	{
+		$this
+			->setName('${4}')
+			->setDescription('${5}')
+			${6}
+		;
+	}
+
+	protected function execute(InputInterface $input, OutputInterface $output)
+	{
+	}
+}
+
