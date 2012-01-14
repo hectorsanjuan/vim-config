@@ -103,3 +103,9 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR>
 let g:Tlist_Use_Right_Window=1
 nnoremap <silent> <F3> :TlistToggle<CR>
 
+
+"" Custom functions.
+function! PhpNameSpace()
+    return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')
+endfunction
+
