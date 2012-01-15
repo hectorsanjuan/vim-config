@@ -25,6 +25,28 @@ set title
 set nobackup
 set noswapfile
 set go-=T
+set wildmenu
+set wildmode=list:longest
+set lazyredraw
+set sidescrolloff=10
+
+
+"" Status options: status line format
+set laststatus=2
+set statusline=
+set statusline+=%<
+set statusline+=[buf:\ %n]
+set statusline+=%-40f
+set statusline+=%m
+set statusline+=\ [%{&ff}]
+set statusline+=\ %(%r%h%w%y%)
+set statusline+=%=
+set statusline+=[
+set statusline+=line:%l/%L
+set statusline+=\,\ col:%c%V
+set statusline+=\ pos:%P
+set statusline+=]
+set statusline+=%{fugitive#statusline()}
 
 
 "" Color options: color scheme
@@ -55,8 +77,8 @@ set encoding=UTF-8
 
 
 "" Command options: history and undo levels
-set history=1000
-set undolevels=1000
+set history=500
+set undolevels=500
 
 
 "" Indent options: always 4 spaces no tabs
@@ -74,6 +96,7 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+nnoremap <leader>/ :noh<CR>
 
 
 "" Folding options: enable, use {,} to fold
@@ -87,6 +110,10 @@ set foldopen=block,hor,mark,percent,quickfix,tag
 "" Mapping options: change leader and local general shortcuts
 let mapleader=","
 let g:mapleader=","
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 
 "" Buffer options
