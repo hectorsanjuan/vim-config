@@ -34,12 +34,15 @@ set sidescrolloff=10
 "" Status options: status line format
 set laststatus=2
 set statusline=
+set statusline+=[buf:%n]
 set statusline+=%<
-set statusline+=[buf:\ %n]
-set statusline+=%-40f
+set statusline+=\ %f
 set statusline+=%m
-set statusline+=\ [%{&ff}]
-set statusline+=\ %(%r%h%w%y%)
+set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}/
+set statusline+=%{&ff}
+set statusline+=%{strlen(&ft)?'/':''}
+set statusline+=%{strlen(&ft)?&ft:''}]
+set statusline+=\ %(%r%h%w%)
 set statusline+=%=
 set statusline+=[
 set statusline+=line:%l/%L
