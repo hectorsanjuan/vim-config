@@ -43,3 +43,6 @@
 [submodule "bundle/php"]
 	path = bundle/php
 	url = http://github.com/vim-scripts/php.vim--Garvin.git
+[submodule "bundle/jinja"]
+	path = bundle/jinja
+	url = http://github.com/vim-scripts/Jinja.git

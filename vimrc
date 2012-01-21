@@ -118,7 +118,7 @@ map <C-l> <C-w>l
 
 "" Buffer options
 au BufWritePre * :%s/\s\+$//e
-au BufRead,BufNewFile *.twig set syntax=htmljinja
+au BufRead,BufNewFile *.twig setf htmljinja
 
 
 "" NerdTree options
@@ -134,5 +134,9 @@ nnoremap <silent> <F3> :TlistToggle<CR>
 "" Custom functions.
 function! PhpNameSpace()
     return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')
+endfunction
+
+function! PhpNameSpaceRepository()
+    return substitute(PhpNameSpace(), 'Entity', 'Repository', 'g')
 endfunction
 
