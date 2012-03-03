@@ -46,3 +46,6 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = http://github.com/vim-scripts/Jinja.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = http://github.com/tpope/vim-rails.git
