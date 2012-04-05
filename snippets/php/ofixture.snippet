@@ -1,0 +1,34 @@
+<?php
+
+namespace ${1:`PhpNameSpace()`};
+
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+
+use ${2};
+
+/**
+ * `PhpNameSpace()`\$3
+ *
+ * $3 Data fixtures.
+ */
+class ${3:`Filename()`} extends AbstractFixture implements OrderedFixtureInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+	public function load(ObjectManager $manager)
+	{
+		${5:// TODO: Add code here lo load fixtures.}
+	}
+
+    /**
+     * {@inheritdoc}
+     */
+	public function getOrder()
+	{
+		return ${4};
+	}
+}
+
