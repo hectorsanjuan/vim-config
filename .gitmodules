@@ -49,3 +49,15 @@
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = http://github.com/tpope/vim-rails.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = http://github.com/vim-scripts/SuperTab-continued..git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = http://github.com/vim-scripts/Command-T.git
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = http://github.com/vim-scripts/phpcomplete.vim.git
+[submodule "dict/php.dict"]
+	path = dict/php.dict
+	url = http://github.com/vim-scripts/PHP-dictionary.git

@@ -27,6 +27,7 @@ set noswapfile
 set go-=T
 set wildmenu
 set wildmode=list:longest
+set wildignore=.git
 set lazyredraw
 set sidescrolloff=10
 
@@ -132,6 +133,24 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR>
 "" taglist options
 let g:Tlist_Use_Right_Window=1
 nnoremap <silent> <F3> :TlistToggle<CR>
+
+
+"" OMNICompletion by filetype
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+
+"" Dictionaries.
+autocmd FileType php set dict+=~/.vim/dict/php.dict/PHP.dict
+set complete+=k
+
+
+"" PHP symfony options.
+set wildignore+=app/cache/**,app/logs/**,vendor/**
 
 
 "" Custom functions.
