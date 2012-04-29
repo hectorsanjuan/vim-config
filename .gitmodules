@@ -61,3 +61,6 @@
 [submodule "dict/php.dict"]
 	path = dict/php.dict
 	url = http://github.com/vim-scripts/PHP-dictionary.git
+[submodule "bundle/rvm"]
+	path = bundle/rvm
+	url = http://github.com/tpope/vim-rvm.git
