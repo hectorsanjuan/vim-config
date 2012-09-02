@@ -28,33 +28,21 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = http://github.com/vim-scripts/delimitMate.vim.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = http://github.com/vim-scripts/taglist.vim.git
-[submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = http://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "bundle/Align"]
 	path = bundle/Align
 	url = http://github.com/vim-scripts/Align
 [submodule "bundle/php"]
 	path = bundle/php
 	url = http://github.com/vim-scripts/php.vim--Garvin.git
-[submodule "bundle/jinja"]
-	path = bundle/jinja
-	url = http://github.com/vim-scripts/Jinja.git
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = http://github.com/tpope/vim-rails.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = http://github.com/vim-scripts/SuperTab-continued..git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = http://github.com/vim-scripts/Command-T.git
 [submodule "bundle/phpcomplete"]
 	path = bundle/phpcomplete
 	url = http://github.com/vim-scripts/phpcomplete.vim.git
@@ -67,3 +55,21 @@
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = http://github.com/tpope/vim-cucumber.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = http://github.com/vim-scripts/ack.vim.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = http://github.com/bingaman/vim-sparkup.git
+[submodule "bundle/coffee-script"]
+	path = bundle/coffee-script
+	url = http://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/css-color"]
+	path = bundle/css-color
+	url = http://github.com/vim-scripts/css_color.vim.git
+[submodule "bundle/less"]
+	path = bundle/less
+	url = http://github.com/vim-scripts/vim-less.git
+[submodule "bundle/css3-syntax"]
+	path = bundle/css3-syntax
+	url = http://github.com/hail2u/vim-css3-syntax.git
