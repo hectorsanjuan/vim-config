@@ -1,6 +1,12 @@
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
+[submodule "bundle/css3-syntax"]
+	path = bundle/css3-syntax
+	url = http://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = http://github.com/bingaman/vim-sparkup.git
+[submodule "bundle/coffee-script"]
+	path = bundle/coffee-script
+	url = http://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
@@ -25,6 +31,18 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = http://github.com/tpope/vim-abolish.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = http://github.com/tpope/vim-rails.git
+[submodule "bundle/rvm"]
+	path = bundle/rvm
+	url = http://github.com/tpope/vim-rvm.git
+[submodule "bundle/cucumber"]
+	path = bundle/cucumber
+	url = http://github.com/tpope/vim-cucumber.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = http://github.com/tpope/vim-markdown.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
@@ -37,39 +55,33 @@
 [submodule "bundle/php"]
 	path = bundle/php
 	url = http://github.com/vim-scripts/php.vim--Garvin.git
-[submodule "bundle/rails"]
-	path = bundle/rails
-	url = http://github.com/tpope/vim-rails.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = http://github.com/vim-scripts/SuperTab-continued..git
-[submodule "bundle/phpcomplete"]
-	path = bundle/phpcomplete
-	url = http://github.com/vim-scripts/phpcomplete.vim.git
 [submodule "dict/php.dict"]
 	path = dict/php.dict
 	url = http://github.com/vim-scripts/PHP-dictionary.git
-[submodule "bundle/rvm"]
-	path = bundle/rvm
-	url = http://github.com/tpope/vim-rvm.git
-[submodule "bundle/cucumber"]
-	path = bundle/cucumber
-	url = http://github.com/tpope/vim-cucumber.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = http://github.com/vim-scripts/ack.vim.git
-[submodule "bundle/sparkup"]
-	path = bundle/sparkup
-	url = http://github.com/bingaman/vim-sparkup.git
-[submodule "bundle/coffee-script"]
-	path = bundle/coffee-script
-	url = http://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = http://github.com/vim-scripts/css_color.vim.git
 [submodule "bundle/less"]
 	path = bundle/less
 	url = http://github.com/vim-scripts/vim-less.git
-[submodule "bundle/css3-syntax"]
-	path = bundle/css3-syntax
-	url = http://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/pony"]
+	path = bundle/pony
+	url = git://github.com/rainerborene/vim-pony.git
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
+	url = git@github.com:flazz/vim-colorschemes.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = http://github.com/SirVer/ultisnips
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = http://github.com/ervandew/supertab.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = http://github.com/kien/ctrlp.vim.git
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = http://github.com/shawncplus/phpcomplete.vim.git
