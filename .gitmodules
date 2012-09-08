@@ -1,9 +1,6 @@
 [submodule "bundle/css3-syntax"]
 	path = bundle/css3-syntax
 	url = http://github.com/hail2u/vim-css3-syntax.git
-[submodule "bundle/sparkup"]
-	path = bundle/sparkup
-	url = http://github.com/bingaman/vim-sparkup.git
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = http://github.com/kchmck/vim-coffee-script.git
@@ -85,3 +82,6 @@
 [submodule "bundle/phpcomplete"]
 	path = bundle/phpcomplete
 	url = http://github.com/shawncplus/phpcomplete.vim.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = http://github.com/mattn/zencoding-vim.git

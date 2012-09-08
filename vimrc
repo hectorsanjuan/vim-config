@@ -120,19 +120,19 @@ vnoremap <tab> %
 inoremap <f1> <esc>
 nnoremap <f1> <esc>
 vnoremap <f1> <esc>
-nnoremap <leader> W :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 map j gj
 map k gk
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
-nnoremap <leader> w <c-w>v<c-w>l
-nnoremap <leader> <space> :noh<cr>
-nnoremap <silent> <space> @=(foldlevel('.')?'za':"\<space>")<cr>
+nnoremap <leader>w <c-w>v<c-w>l
+nnoremap <leader><space> :noh<cr>
+nnoremap <silent><space> @=(foldlevel('.')?'za':"\<space>")<cr>
 vnoremap <space> zf
-nnoremap <leader> ft Vatzf
-nnoremap <leader> a :Ack
+nnoremap <leader>ft Vatzf
+nnoremap <leader>a :Ack
 vmap Q gq
 nmap Q gqap
 
@@ -144,7 +144,7 @@ au BufRead,BufNewFile *.twig setf htmldjango
 
 "" NerdTree options
 let g:NERDTreeWinPos="right"
-nnoremap <silent> <f2> :NERDTreeToggle<cr>
+nnoremap <silent><f2> :NERDTreeToggle<cr>
 
 
 "" taglist options
@@ -155,13 +155,13 @@ let Tlist_Inc_Winwidth=1
 let Tlist_Use_Right_Window=1
 let Tlist_Display_Prototype=1
 let Tlist_Display_Tag_Scope=1
-nnoremap <silent> <f3> :TlistToggle<cr>
+nnoremap <silent><f3> :TlistToggle<cr>
 
 
 "" CtrlP options
-let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_map = '<leader>p'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_modex='rc'
+let g:ctrlp_map='<leader>p'
+let g:ctrlp_cmd='CtrlP'
 
 
 "" OMNICompletion by filetype
