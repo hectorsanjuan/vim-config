@@ -180,9 +180,10 @@ nnoremap <silent><f3> :TlistToggle<cr>
 
 
 "" CtrlP options {{{
-let g:ctrlp_working_path_modex='rc'
-let g:ctrlp_map='<leader>p'
-let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_cmd = 'CtrlP'
 "" }}}
 
 
