@@ -14,6 +14,7 @@ filetype plugin indent on
 syntax on
 "" }}}
 
+
 "" General options. {{{
 set hidden
 set showmode
@@ -26,6 +27,10 @@ set title
 set nobackup
 set noswapfile
 set go-=T
+set go-=l
+set go-=L
+set go-=r
+set go-=R
 set wildmenu
 set wildmode=list:longest
 set wildignore=.git,*.pyc,*.bak,*.class,*.sw[a-z],*.o,*
@@ -144,8 +149,9 @@ nnoremap <silent><space> @=(foldlevel('.')?'za':"\<space>")<cr>
 vnoremap <space> zf
 nnoremap <leader>ft Vatzf
 nnoremap <leader>a :Ack
-vmap Q gq
-nmap Q gqap
+vnoremap Q gq
+nnoremap Q gqap
+nnoremap <leader>q :q<cr>
 "" }}}
 
 
@@ -185,6 +191,18 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_leader_key = '<c-y>'
 let g:user_zen_settings = {'indentation' : '    '}
 "" }}}
+
+
+"" UltiSnips options {{{
+let g:UltiSnipsSnippetsDir='~/.vim/snippets'
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
+nnoremap <leader>s :UltiSnipsEdit<cr>
+"" }}}
+
 
 "" OMNICompletion by filetype {{{
 autocmd FileType python set omnifunc=pythoncomplete#Complete
