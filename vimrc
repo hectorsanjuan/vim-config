@@ -2,18 +2,19 @@ set nocompatible
 set backspace=indent,eol,start
 
 
-"" Setup pathogen to manage plugins.
+"" Setup pathogen to manage plugins. {{{
 call pathogen#infect()
 call pathogen#helptags()
+"" }}}
 
 
-"" Syntax options: enable syntax highlight
+"" Syntax options: enable syntax highlight {{{
 filetype on
 filetype plugin indent on
 syntax on
+"" }}}
 
-
-"" General options.
+"" General options. {{{
 set hidden
 set showmode
 set showcmd
@@ -30,9 +31,10 @@ set wildmode=list:longest
 set wildignore=.git,*.pyc,*.bak,*.class,*.sw[a-z],*.o,*
 set lazyredraw
 set sidescrolloff=10
+"" }}}
 
 
-"" Status options: status line format
+"" Status options: status line format {{{
 set laststatus=2
 set statusline=
 set statusline+=[buf:%n]
@@ -51,41 +53,47 @@ set statusline+=\,\ col:%c%V
 set statusline+=\ pos:%P
 set statusline+=]
 set statusline+=%{fugitive#statusline()}
+"" }}}
 
 
-"" Color options: color scheme
+"" Color options: color scheme {{{
 if has('gui_running')
     colorscheme symfony
 else
     colorscheme desertEx
 endif
+"" }}}
 
 
-"" Editing options.
+"" Editing options. {{{
 set fileformats=unix,dos,mac
 set list
 set listchars=tab:▸\ ,trail:.,extends:#,eol:¬
 set pastetoggle=<f12>
+"" }}}
 
 
-"" Error options: no visual/sound error bell
+"" Error options: no visual/sound error bell {{{
 set noerrorbells
 set novisualbell
 set vb t_vb=
+"" }}}
 
 
-"" Charset options: always force to UTF-8
-set fileencoding=UTF-8
-set termencoding=UTF-8
-set encoding=UTF-8
+"" Charset options: always force to UTF-8 {{{
+set fileencoding=utf-8
+set termencoding=utf-8
+set encoding=utf-8
+"" }}}
 
 
-"" Command options: history and undo levels
+"" Command options: history and undo levels {{{
 set history=500
 set undolevels=500
+"" }}}
 
 
-"" Indent options: always 4 spaces no tabs
+"" Indent options: always 4 spaces no tabs {{{
 set autoindent
 set smartindent
 set tabstop=4
@@ -93,24 +101,27 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
+"" }}}
 
 
-"" Search options: no-sensitive smart incremental
+"" Search options: no-sensitive smart incremental {{{
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+"" }}}
 
 
-"" Folding options: enable, use {,} to fold
+"" Folding options: enable, use {,} to fold {{{
 set foldenable
 set foldmarker={,}
 set foldmethod=marker
 set foldlevel=99
 set foldopen=block,hor,mark,percent,quickfix,tag
+"" }}}
 
 
-"" Mapping options: change leader and local general shortcuts
+"" Mapping options: change leader and local general shortcuts {{{
 let mapleader=","
 let g:mapleader=","
 nnoremap / /\v
@@ -135,19 +146,22 @@ nnoremap <leader>ft Vatzf
 nnoremap <leader>a :Ack
 vmap Q gq
 nmap Q gqap
+"" }}}
 
 
-"" Buffer options
+"" Buffer options {{{
 au BufWritePre * :%s/\s\+$//e
 au BufRead,BufNewFile *.twig setf htmldjango
+"" }}}
 
 
-"" NerdTree options
+"" NerdTree options {{{
 let g:NERDTreeWinPos="right"
 nnoremap <silent><f2> :NERDTreeToggle<cr>
+"" }}}
 
 
-"" taglist options
+"" taglist options {{{
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_WinWidth=40
@@ -156,33 +170,44 @@ let Tlist_Use_Right_Window=1
 let Tlist_Display_Prototype=1
 let Tlist_Display_Tag_Scope=1
 nnoremap <silent><f3> :TlistToggle<cr>
+"" }}}
 
 
-"" CtrlP options
+"" CtrlP options {{{
 let g:ctrlp_working_path_modex='rc'
 let g:ctrlp_map='<leader>p'
 let g:ctrlp_cmd='CtrlP'
+"" }}}
 
 
-"" OMNICompletion by filetype
+"" zencoding options {{{
+let g:use_zen_complete_tag = 1
+let g:user_zen_leader_key = '<c-y>'
+let g:user_zen_settings = {'indentation' : '    '}
+"" }}}
+
+"" OMNICompletion by filetype {{{
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"" }}}
 
 
-"" Dictionaries.
+"" Dictionaries. {{{
 autocmd FileType php set dict+=~/.vim/dict/php.dict/PHP.dict
 set complete+=k
+"" }}}
 
 
-"" PHP symfony options.
+"" PHP symfony options. {{{
 set wildignore+=app/cache/**,app/logs/**,vendor/**
+"" }}}
 
 
-"" Custom functions.
+"" Custom functions. {{{
 function! PhpNameSpace()
     return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')
 endfunction
@@ -190,4 +215,5 @@ endfunction
 function! PhpNameSpaceRepository()
     return substitute(PhpNameSpace(), 'Entity', 'Repository', 'g')
 endfunction
+"" }}}
 
