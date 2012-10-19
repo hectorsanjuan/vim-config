@@ -65,10 +65,11 @@ set statusline+=%{fugitive#statusline()}
 
 
 "" Color options: color scheme {{{
-if has('gui_running')
-    colorscheme symfony
-else
+set t_Co=256
+if &t_Co != 256 && ! has('gui_running')
     colorscheme desertEx
+else
+    colorscheme symfony
 endif
 "" }}}
 
@@ -201,6 +202,7 @@ let g:user_zen_settings = {'indentation' : '    '}
 let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsListSnippets='<c-l>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
@@ -216,14 +218,24 @@ if has('autocmd')
     autocmd FileType css set omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-    autocmd BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
 endif
 "" }}}
 
 
+"" FileType specific options {{{
+if has('autocmd')
+    " Bind handlebars filetype to ext.
+    autocmd BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
+    " TeX and LaTeX options.
+    let g:tex_flavor='latex'
+endif
+"" }}}
+
 "" Dictionaries. {{{
-autocmd FileType php set dict+=~/.vim/dict/php.dict/PHP.dict
-set complete+=k
+if has('autocmd')
+    autocmd FileType php set dict+=~/.vim/dict/php.dict/PHP.dict
+    set complete+=k
+endif
 "" }}}
 
 
