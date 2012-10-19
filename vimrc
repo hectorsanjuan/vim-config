@@ -33,7 +33,10 @@ set go-=r
 set go-=R
 set wildmenu
 set wildmode=list:longest
-set wildignore=.git,*.pyc,*.bak,*.class,*.sw[a-z],*.o,*
+set wildignore+=.git,.hg.svn
+set wildignore+=*.pyc,*.bak,*.class,*.sw[a-z],*.o,*~,*.out
+set wildignore+=*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.fff,*.toc
+set wildignore+=*/tmp/*,*/log/*,*/cache/*,*/.git/*
 set lazyredraw
 set sidescrolloff=10
 "" }}}
