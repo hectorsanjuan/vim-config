@@ -199,13 +199,14 @@ let g:user_zen_settings = {'indentation' : '    '}
 
 
 "" UltiSnips options {{{
-let g:UltiSnipsSnippetsDir='~/.vim/snippets'
+let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsListSnippets='<c-l>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
+let g:snips_author = 'Hector Sanjuan <hector@20lab.com>'
 nnoremap <leader>s :UltiSnipsEdit<cr>
 "" }}}
 

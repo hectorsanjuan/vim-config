@@ -49,9 +49,6 @@
 [submodule "bundle/Align"]
 	path = bundle/Align
 	url = http://github.com/vim-scripts/Align
-[submodule "bundle/php"]
-	path = bundle/php
-	url = http://github.com/vim-scripts/php.vim--Garvin.git
 [submodule "dict/php.dict"]
 	path = dict/php.dict
 	url = http://github.com/vim-scripts/PHP-dictionary.git
@@ -88,3 +85,6 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = http://github.com/nono/vim-handlebars.git
+[submodule "bundle/php"]
+	path = bundle/php
+	url = http://github.com/vim-scripts/phpvim.git
