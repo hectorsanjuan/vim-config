@@ -88,3 +88,6 @@
 [submodule "bundle/php"]
 	path = bundle/php
 	url = http://github.com/vim-scripts/phpvim.git
+[submodule "bundle/rake"]
+	path = bundle/rake
+	url = http://github.com/tpope/vim-rake.git

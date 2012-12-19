@@ -33,10 +33,11 @@ set go-=r
 set go-=R
 set wildmenu
 set wildmode=list:longest
-set wildignore+=.git,.hg.svn
-set wildignore+=*.pyc,*.bak,*.class,*.sw[a-z],*.o,*~,*.out
+set wildignore+=.git,.hg,.svn
+set wildignore+=*.pyc,*.bak,*.class,*.sw[a-z],*.o,*~,*.out,._*
 set wildignore+=*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.fff,*.toc
-set wildignore+=*/tmp/*,*/log/*,*/cache/*,*/.git/*
+set wildignore+=*.zip,*.rar,*.tar,*.tar.gz,*tar.bz2,*.tar.xz,*.tgz
+set wildignore+=*/tmp/*,*/log/*,*/cache/*,*/vendor/*
 set lazyredraw
 set sidescrolloff=10
 "" }}}
@@ -156,6 +157,13 @@ nnoremap <leader>a :Ack
 vnoremap Q gq
 nnoremap Q gqap
 nnoremap <leader>q :q<cr>
+nmap <silent> <leader>cd :lcd %:h<cr>
+nmap <silent> <leader>md :!mkdir -p %:p:h<cr>
+nmap <leader>u mQviwU`Q
+nmap <leader>l mQviwu`Q
+nmap <leader>U mQgewvU`Q
+nmap <leader>L mQgewvu`Q
+nmap <silent> <leader>fc <esc>/\v^[<=>]{7}( .*\|$)<cr>
 "" }}}
 
 
@@ -241,7 +249,7 @@ endif
 
 
 "" PHP symfony options. {{{
-set wildignore+=app/cache/**,app/logs/**,vendor/**
+set wildignore+=*/app/cache/**,*/app/logs/**,*/vendor/**
 "" }}}
 
 
