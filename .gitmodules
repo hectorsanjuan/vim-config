@@ -31,9 +31,6 @@
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = http://github.com/tpope/vim-rails.git
-[submodule "bundle/rvm"]
-	path = bundle/rvm
-	url = http://github.com/tpope/vim-rvm.git
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = http://github.com/tpope/vim-cucumber.git
@@ -63,10 +60,10 @@
 	url = http://github.com/vim-scripts/vim-less.git
 [submodule "bundle/pony"]
 	path = bundle/pony
-	url = git://github.com/rainerborene/vim-pony.git
+	url = http://github.com/rainerborene/vim-pony.git
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
-	url = git@github.com:flazz/vim-colorschemes.git
+	url = http://github.com/flazz/vim-colorschemes.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = http://github.com/SirVer/ultisnips
