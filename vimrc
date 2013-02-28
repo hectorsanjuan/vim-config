@@ -233,6 +233,8 @@ endif
 
 "" FileType specific options {{{
 if has('autocmd')
+    " Setup ruby indentation.
+    autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expantab
     " Bind handlebars filetype to ext.
     autocmd BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
     " TeX and LaTeX options.
