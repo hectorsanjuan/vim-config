@@ -76,9 +76,6 @@
 [submodule "bundle/phpcomplete"]
 	path = bundle/phpcomplete
 	url = http://github.com/shawncplus/phpcomplete.vim.git
-[submodule "bundle/zencoding"]
-	path = bundle/zencoding
-	url = http://github.com/mattn/zencoding-vim.git
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = http://github.com/nono/vim-handlebars.git
@@ -88,3 +85,9 @@
 [submodule "bundle/rake"]
 	path = bundle/rake
 	url = http://github.com/tpope/vim-rake.git
+[submodule "bundle/emmet"]
+	path = bundle/emmet
+	url = http://github.com/mattn/emmet-vim
+[submodule "bundle/editorconfig"]
+	path = bundle/editorconfig
+	url = http://github.com/editorconfig/editorconfig-vim
