@@ -91,3 +91,6 @@
 [submodule "bundle/editorconfig"]
 	path = bundle/editorconfig
 	url = http://github.com/editorconfig/editorconfig-vim
+[submodule "bundle/multiple-cursors"]
+	path = bundle/multiple-cursors
+	url = http://github.com/terryma/vim-multiple-cursors.git
