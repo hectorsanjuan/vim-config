@@ -206,6 +206,14 @@ let g:user_zen_settings = {'indentation' : '    '}
 "" }}}
 
 
+"" Multiple-Cursors options {{{
+"let g:multi_cursor_next_key='<C-n>'
+"let g:multi_cursor_prev_key='<C-p>'
+"let g:multi_cursor_skip_key='<C-x>'
+"let g:multi_cursor_quit_key='<Esc>'
+"" }}}
+
+
 "" UltiSnips options {{{
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsEditSplit='vertical'
