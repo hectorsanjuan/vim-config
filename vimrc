@@ -169,7 +169,6 @@ nmap <silent> <leader>fc <esc>/\v^[<=>]{7}( .*\|$)<cr>
 
 "" Buffer options {{{
 au BufWritePre * :%s/\s\+$//e
-au BufRead,BufNewFile *.twig setf htmldjango
 "" }}}
 
 
@@ -199,78 +198,10 @@ let g:ctrlp_cmd = 'CtrlP'
 "" }}}
 
 
-"" zencoding options {{{
-let g:use_zen_complete_tag = 1
-let g:user_zen_leader_key = '<c-y>'
-let g:user_zen_settings = {'indentation' : '    '}
-"" }}}
-
-
 "" Multiple-Cursors options {{{
 "let g:multi_cursor_next_key='<C-n>'
 "let g:multi_cursor_prev_key='<C-p>'
 "let g:multi_cursor_skip_key='<C-x>'
 "let g:multi_cursor_quit_key='<Esc>'
-"" }}}
-
-
-"" UltiSnips options {{{
-let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
-let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsListSnippets='<c-l>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
-let g:snips_author = 'Hector Sanjuan <hector@20lab.com>'
-nnoremap <leader>s :UltiSnipsEdit<cr>
-"" }}}
-
-
-"" OMNICompletion by filetype {{{
-if has('autocmd')
-    autocmd FileType python set omnifunc=pythoncomplete#Complete
-    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-    autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-    autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-endif
-"" }}}
-
-
-"" FileType specific options {{{
-if has('autocmd')
-    " Setup ruby and yaml indentation.
-    autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-    autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-    " Bind handlebars filetype to ext.
-    autocmd BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
-    " TeX and LaTeX options.
-    let g:tex_flavor='latex'
-endif
-"" }}}
-
-"" Dictionaries. {{{
-if has('autocmd')
-    autocmd FileType php set dict+=~/.vim/dict/php.dict/PHP.dict
-    set complete+=k
-endif
-"" }}}
-
-
-"" PHP symfony options. {{{
-set wildignore+=*/app/cache/**,*/app/logs/**,*/vendor/**
-"" }}}
-
-
-"" Custom functions. {{{
-function! PhpNameSpace()
-    return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')
-endfunction
-
-function! PhpNameSpaceRepository()
-    return substitute(PhpNameSpace(), 'Entity', 'Repository', 'g')
-endfunction
 "" }}}
 
