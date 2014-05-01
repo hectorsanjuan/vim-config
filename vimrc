@@ -172,6 +172,11 @@ au BufWritePre * :%s/\s\+$//e
 "" }}}
 
 
+"" Tagbar options {{{
+nnoremap <silent><f3> :TagbarToggle<cr>
+"" }}}
+
+
 "" NerdTree options {{{
 let g:NERDTreeWinPos="right"
 nnoremap <silent><f2> :NERDTreeToggle<cr>
