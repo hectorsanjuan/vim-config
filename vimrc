@@ -178,18 +178,6 @@ nnoremap <silent><f2> :NERDTreeToggle<cr>
 "" }}}
 
 
-"" taglist options {{{
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_WinWidth=40
-let Tlist_Inc_Winwidth=1
-let Tlist_Use_Right_Window=1
-let Tlist_Display_Prototype=1
-let Tlist_Display_Tag_Scope=1
-nnoremap <silent><f3> :TlistToggle<cr>
-"" }}}
-
-
 "" CtrlP options {{{
 let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_working_path_mode = 'rc'
