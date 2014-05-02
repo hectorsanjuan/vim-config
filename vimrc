@@ -184,10 +184,19 @@ nnoremap <silent><f2> :NERDTreeToggle<cr>
 
 
 "" CtrlP options {{{
-let g:ctrlp_user_command = 'find %s -type f'
-let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others']
+    \ },
+  \ 'fallback': 'find %s -type f'
+  \ }
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 "" }}}
 
 
