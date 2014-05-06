@@ -100,3 +100,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = http://github.com/majutsushi/tagbar.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = http://github.com/honza/vim-snippets.git

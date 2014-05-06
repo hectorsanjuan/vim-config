@@ -200,6 +200,19 @@ let g:ctrlp_custom_ignore = {
 "" }}}
 
 
+"" UltiSnips options {{{
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsListSnippets = '<c-tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsEditSplit = 'vertical'
+"" }}}
+
+
+"" options {{{
+"" }}}
+
+
 "" Multiple-Cursors options {{{
 "let g:multi_cursor_next_key='<C-n>'
 "let g:multi_cursor_prev_key='<C-p>'
