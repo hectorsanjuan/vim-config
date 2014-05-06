@@ -40,6 +40,7 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
+	ignore = dirty
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = http://github.com/vim-scripts/taglist.vim.git
@@ -94,6 +95,7 @@
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = http://github.com/terryma/vim-multiple-cursors.git
+	ignore = dirty
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = http://github.com/joonty/vdebug.git
