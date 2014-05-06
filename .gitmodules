@@ -103,3 +103,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = http://github.com/honza/vim-snippets.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = http://github.com/Raimondi/delimitMate.git
