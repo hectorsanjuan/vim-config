@@ -40,6 +40,7 @@ set wildignore+=*.zip,*.rar,*.tar,*.tar.gz,*tar.bz2,*.tar.xz,*.tgz
 set wildignore+=*/tmp/*,*/log/*,*/cache/*,*/vendor/*
 set lazyredraw
 set sidescrolloff=10
+set shortmess+=I
 "" }}}
 
 
