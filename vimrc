@@ -26,6 +26,7 @@ set showmatch
 set title
 set nobackup
 set noswapfile
+set go-=m
 set go-=T
 set go-=l
 set go-=L
