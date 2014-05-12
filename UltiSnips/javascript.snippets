@@ -1,4 +1,12 @@
 global !p
+def injected_args(arg_list):
+	args = [ "'" + arg.strip() + "'" for arg in arg_list.split(",") if arg_list]
+
+	if args:
+		args.append("")
+
+	return ", ".join(args)
+
 def injectIt(text):
 	if text:
 		args = [ "'" + arg + "'" for arg in text.split(", ")]
@@ -32,4 +40,10 @@ snippet ngctrl "angular controler" b
 .controller('${1:Name}Ctrl', [`!p snip.rv=injectIt(t[2])`function ($2) {
 	${VISUAL}$0
 }])
+endsnippet
+
+snippet bf(unction)? "Description" r
+[`!p snip.rv = injected_args(t[1])`function($1) {
+	${VISUAL}$0
+}]
 endsnippet
