@@ -108,3 +108,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = http://github.com/Raimondi/delimitMate.git
+[submodule "bundle/salt-vim"]
+	path = bundle/salt-vim
+	url = http://github.com/saltstack/salt-vim.git
