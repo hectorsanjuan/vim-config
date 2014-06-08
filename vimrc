@@ -179,12 +179,6 @@ nnoremap <silent><f3> :TagbarToggle<cr>
 "" }}}
 
 
-"" NerdTree options {{{
-let g:NERDTreeWinPos="right"
-nnoremap <silent><f2> :NERDTreeToggle<cr>
-"" }}}
-
-
 "" CtrlP options {{{
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<leader>f'

@@ -4,9 +4,6 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = http://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = http://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
@@ -111,3 +108,6 @@
 [submodule "bundle/salt-vim"]
 	path = bundle/salt-vim
 	url = http://github.com/saltstack/salt-vim.git
+[submodule "bundle/vinegar"]
+	path = bundle/vinegar
+	url = http://github.com/tpope/vim-vinegar.git
