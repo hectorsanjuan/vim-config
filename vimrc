@@ -42,6 +42,7 @@ set wildignore+=*/tmp/*,*/log/*,*/cache/*,*/vendor/*
 set lazyredraw
 set sidescrolloff=10
 set shortmess+=I
+set background=dark
 "" }}}
 
 
@@ -70,9 +71,9 @@ set statusline+=%{fugitive#statusline()}
 "" Color options: color scheme {{{
 set t_Co=256
 if &t_Co != 256 && ! has('gui_running')
-    colorscheme desertEx
+    colorscheme base16-tomorrow
 else
-    colorscheme symfony
+    colorscheme base16-tomorrow
 endif
 "" }}}
 
@@ -215,4 +216,3 @@ let g:UltiSnipsEditSplit = 'vertical'
 "let g:multi_cursor_skip_key='<C-x>'
 "let g:multi_cursor_quit_key='<Esc>'
 "" }}}
-
