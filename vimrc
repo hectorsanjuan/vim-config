@@ -216,3 +216,5 @@ let g:UltiSnipsEditSplit = 'vertical'
 "let g:multi_cursor_skip_key='<C-x>'
 "let g:multi_cursor_quit_key='<Esc>'
 "" }}}
+
+let base16colorspace = 256
