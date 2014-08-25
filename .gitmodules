@@ -123,3 +123,9 @@
 [submodule "bundle/json"]
 	path = bundle/json
 	url = http://github.com/leshill/vim-json
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = http://github.com/bling/vim-airline
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = https://github.com/edkolev/tmuxline.vim

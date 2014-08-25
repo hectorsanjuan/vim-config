@@ -69,6 +69,8 @@ set statusline+=%{fugitive#statusline()}
 
 
 "" Color options: color scheme {{{
+let base16colorspace=256
+
 set t_Co=256
 if &t_Co != 256 && ! has('gui_running')
     colorscheme base16-tomorrow
@@ -181,6 +183,8 @@ nnoremap <silent><f3> :TagbarToggle<cr>
 
 
 "" CtrlP options {{{
+nnoremap <leader>t :CtrlPTag<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlP'
@@ -206,9 +210,6 @@ let g:UltiSnipsEditSplit = 'vertical'
 "" }}}
 
 
-let base16colorspace = 256
-
-
 "" Create new parent directories on save {{{
 function s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
@@ -222,4 +223,19 @@ augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
+"" }}}
+
+
+"" airline options {{{
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16'
+let g:airline_enable_branch = 1
+let g:airline_enable_syntastic = 1
+"" }}}
+
+
+"" GUI specific options {{{
+if has('gui_macvim')
+    set guifont=inconsolata\ for\ Powerline:h12
+endif
 "" }}}
