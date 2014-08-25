@@ -55,7 +55,7 @@
 	url = http://github.com/vim-scripts/css_color.vim.git
 [submodule "bundle/less"]
 	path = bundle/less
-	url = http://github.com/vim-scripts/vim-less.git
+	url = http://github.com/groenewege/vim-less
 [submodule "bundle/pony"]
 	path = bundle/pony
 	url = http://github.com/rainerborene/vim-pony.git
@@ -120,3 +120,6 @@
 [submodule "bundle/php.vim"]
 	path = bundle/php.vim
 	url = https://github.com/StanAngeloff/php.vim.git
+[submodule "bundle/json"]
+	path = bundle/json
+	url = http://github.com/leshill/vim-json
