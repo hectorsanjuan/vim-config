@@ -149,6 +149,8 @@ vnoremap <f1> <esc>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 map j gj
 map k gk
+imap jk <esc>
+imap kj <esc>
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
@@ -174,6 +176,7 @@ nmap <silent> <leader>fc <esc>/\v^[<=>]{7}( .*\|$)<cr>
 
 "" Buffer options {{{
 au BufWritePre * :%s/\s\+$//e
+au BufWritePre * :%s/\($\n\s*\)\+\%$//e
 "" }}}
 
 
