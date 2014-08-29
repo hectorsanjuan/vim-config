@@ -186,8 +186,9 @@ nnoremap <silent><f3> :TagbarToggle<cr>
 
 
 "" CtrlP options {{{
-nnoremap <leader>t :CtrlPTag<cr>
+nnoremap <leader>t :CtrlPBufTag<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
+let g:ctrlp_extensions = ['buffertag']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlP'
