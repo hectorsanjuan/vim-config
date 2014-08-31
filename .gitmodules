@@ -49,7 +49,7 @@
 	url = http://github.com/vim-scripts/PHP-dictionary.git
 [submodule "bundle/ack"]
 	path = bundle/ack
-	url = http://github.com/vim-scripts/ack.vim.git
+	url = http://github.com/mileszs/ack.vim
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = http://github.com/vim-scripts/css_color.vim.git
