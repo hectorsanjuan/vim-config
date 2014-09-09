@@ -171,6 +171,14 @@ nmap <leader>l mQviwu`Q
 nmap <leader>U mQgewvU`Q
 nmap <leader>L mQgewvu`Q
 nmap <silent> <leader>fc <esc>/\v^[<=>]{7}( .*\|$)<cr>
+
+nmap <leader>bl :ls<cr>
+nmap <leader>bn :bnext<cr>
+nmap <leader>bp :bprevious<cr>
+nmap <leader>bb :b#<cr>
+nmap <leader>bc :enew<cr>
+nmap <leader>bd :bdelete<cr>
+nmap <leader>bq :bprevious <bar> bdelete #<cr>
 "" }}}
 
 
