@@ -1,0 +1,53 @@
+global !p
+def filename_to_namespace(filename):
+	basename = filename.replace(snip.fn, '').rstrip('/')
+
+	return re.sub(r'^.*src/', '', basename).replace('/', '\\')
+
+
+def action_to_route_uri(path, action):
+	base_url = re.sub(r'^.*Controller', '', path.replace(snip.fn, ''))
+
+	if (not action or 'index' == action):
+		action = ''
+
+	return (base_url + action).lower().rstrip('/')
+
+
+def action_to_route_name(action):
+	if (not action):
+		return ''
+
+	controller = snip.basename.replace('Controller', '')
+	action = action[0].capitalize() + action[1:]
+	action_words = re.findall('[A-Z][^A-Z]*', controller + action)
+
+	return '_'.join(action_words).lower()
+endglobal
+
+snippet sf2.ctrl "Symfony2 controller" b
+<?php
+
+namespace `!p snip.rv=filename_to_namespace(path)`;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+/**
+ * $1
+ */
+class ${1:`!p snip.rv = snip.basename`} extends Controller
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet sf2.action "Symfony2 controller action" b
+/**
+ * @Route("${2:`!p snip.rv = action_to_route_uri(path, t[1])`}", name="${3:`!p snip.rv = action_to_route_name(t[1])`}")
+ */
+public function ${1:index}Action()
+{
+	${VISUAL}$0
+}
+endsnippet

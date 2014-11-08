@@ -1,0 +1,112 @@
+global !p
+def filename_to_object(filename):
+	parts = [ part.title() for part in filename.split(".") if part != "js" ]
+
+	return "".join(parts)
+endglobal
+
+snippet ngn "angular noop" !b
+angular.noop
+endsnippet
+
+snippet nglc "angular lowercase" !b
+angular.lowercase(${1:'string'})
+endsnippet
+
+snippet nguc "angular uppercase" !b
+angular.uppercase(${1:'string'})
+endsnippet
+
+snippet ngmod "angular module" b
+.module('${1:moduleName}', [$2])
+endsnippet
+
+snippet ngprov "angular provider" b
+.provider(${1:'name'}, $2)
+endsnippet
+
+snippet ngctrl "angular controler" b
+.controller('${1:Controller'}, $2)
+endsnippet
+
+snippet ng.m "Angular create module" b
+(function () {
+	'use strict';
+
+	angular
+		.module('${1:module}', [${2:'dependencies'}]);
+})();
+endsnippet
+
+snippet ng.c "Angular controller" b
+(function () {
+	'use strict';
+
+	angular
+		.module('${1:module}')
+		.controller('${2:`!p snip.rv=filename_to_object(fn)`}', $2);
+
+	/** @ngInject */
+	function $2(${3:dependencies}) {
+		/*jshint validthis: true */
+		var vm = this;
+
+		activate();
+
+		function activate() {
+			${VISUAL}$0
+		}
+	}
+})();
+endsnippet
+
+snippet ng.d "Angular directive" b
+(function () {
+	'use strict';
+
+	angular
+		.module('${1:module}')
+		.directive('${2:`!p snip.rv=filename_to_object(fn)`}', $2);
+
+	/** @ngInject */
+	function $2(${3:dependencies}) {
+		// Ussage:
+		//
+		// Creates:
+		//
+		var directive = {
+			link: link,
+			restrict: 'A'
+		};
+
+		return directive;
+
+		function link(scope, element, attr) {
+			${VISUAL}$0
+		}
+	}
+})();
+endsnippet
+
+snippet ng.f "Angular factory" b
+(function () {
+	'use strict';
+
+	angular
+		.module('${1:module}')
+		.factory('${2:`!p snip.rv=filename_to_object(fn)`}', $2);
+
+	/** @ngInject */
+	function $2(${3:dependencies}) {
+		var service = {
+			${4:func}: $4
+		};
+
+		return service;
+
+		function $4() {
+			${VISUAL}$0
+		}
+	}
+})();
+endsnippet

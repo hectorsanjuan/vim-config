@@ -1,0 +1,42 @@
+snippet gr "gulp require" b
+var gulp = require('gulp');
+endsnippet
+
+snippet grp "gulp require plugin" b
+var ${1:plugin} = require('gulp-${2:$1}');$0
+endsnippet
+
+snippet gt "Gulp task definition" b
+gulp.task('${1:default}', function () {
+	${0:${VISUAL:\/\/TODO: Add task process here ...}}
+});
+endsnippet
+
+snippet gtt "Gulp task dependant definition" b
+gulp.task('${1:default}', ${2:[$3], }function () {
+	${0:${VISUAL:\/\/TODO: Add task process here ...}}
+});
+endsnippet
+
+snippet gtd "Gulp default task definition" b
+gulp.task('default', ${1:[$2]});
+endsnippet
+
+snippet gtw "Gulp task watch" b
+gulp.task('watch', function () {
+	gulp.watch($1, [$2]);$3
+});
+endsnippet
+
+snippet gs "Gulp source" b
+gulp.src(${1:files})
+endsnippet
+
+snippet gd "Gulp dest folder" b
+.pipe(gulp.dest(${1:'${2:folder}'}))
+endsnippet
+
+snippet gp "Gulp pipe" b
+.pipe(${1:plugin}($2))
+$0
+endsnippet

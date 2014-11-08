@@ -129,3 +129,9 @@
 [submodule "bundle/tmuxline"]
 	path = bundle/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule "bundle/twig"]
+	path = bundle/twig
+	url = https://github.com/evidens/vim-twig.git
+[submodule "bundle/signify"]
+	path = bundle/signify
+	url = https://github.com/mhinz/vim-signify.git
