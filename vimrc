@@ -247,6 +247,13 @@ let g:airline_enable_syntastic = 1
 "" }}}
 
 
+"" conoline options {{{
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal=1
+let g:conoline_use_colorscheme_default_insert=1
+"" }}}
+
+
 "" GUI specific options {{{
 if has('gui_macvim')
     set guifont=inconsolata\ for\ Powerline:h12
