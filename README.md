@@ -1,4 +1,4 @@
-# VIM config
+# VIM config (Deprecated in favour of new repo hectorsanjuan/dotvim)
 
 This is my current VIM config. I use pathogen plugin to manage other
 and use git submodules to track last versions.
